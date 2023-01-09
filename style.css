@@ -9,6 +9,8 @@
 :root {
     --primary-clr : #337301;
     --clr-black-text : #161616;
+
+    --border-radius : 10px;
 }
 body {
     font-family: 'Poppins', sans-serif;
@@ -20,6 +22,7 @@ body {
 }
 img {
     width: 100%;
+    height: 100%;
 }
 .header {
     display: flex;
@@ -75,7 +78,7 @@ img {
     padding-left: 30px; 
     color: #fff;
     margin-top: 20px; 
-    border-radius: 10px;
+    border-radius:var(--border-radius);
 }
 .step__container {
     margin-top: 50px; 
@@ -137,16 +140,26 @@ img {
 .product__card {
     margin-top: 25px; 
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 0px 4px 4px rgba(0,0,0,.25);
+    overflow: hidden; 
+    border-radius : var(--border-radius);
 }
+
 .product__card-details {
     display: flex;
-    padding: 20px; 
+    padding-right: 20px;
+    padding-left: 20px; 
+    padding-top: 10px; 
+    padding-bottom: 10px;
     flex-direction: column;
 }
 .product__card-details h4 {
     font-weight: 500;
     color: var(--clr-black-text);
 }
+
 .product__card-details p {
     font-weight: 300;
     color : #4E4D4D;
@@ -156,7 +169,67 @@ img {
     background-color: var(--primary-clr);
     text-align: center;
     color: white; 
+    width: min-content;
     border-radius: 5px;
-    padding-inline: 20px;/* padding-left and padding-right*/
-
+    padding-right: 20px; 
+    padding-left: 20px; 
+    margin-top: 10px;
+}
+.footer {
+    background-color: var(--primary-clr);
+    margin-top: 50px;
+    padding-block: 40px;
+}
+.footer__social-links-img {
+    width: 50px;
+    height: 50px;
+}
+.footer-logo-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px; 
+}
+.footer-logo-container p a{
+    font-weight: 600;
+    font-size: 2rem;
+    color : #fff !important; 
+}
+.footer__number {
+    color : white;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 20px;
+}
+.social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.social-container p {
+    font-size: 1.1rem; 
+    color: white; 
+}
+.nav__list-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; 
+}
+.nav__link-footer {
+    font-size: 1.1rem;
+    color: white; 
+}
+.social__links-container {
+    display: flex;
+    gap: 20px; 
+}
+.footer__container {
+    display: flex; 
+    justify-content: space-between;
 }
